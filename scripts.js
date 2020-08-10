@@ -72,6 +72,9 @@ function playRound (playerSelection, computerSelection) {
         else if (computerScore == playerScore) {
             console.log(`Final Score - Player:${playerScore} Computer:${computerScore}. It's a draw!`)
         }
+        //Reset player scores
+        playerScore = 0
+        computerScore = 0
     }
 
 //Generate random integer from 0-2
