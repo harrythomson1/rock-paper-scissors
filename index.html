@@ -13,21 +13,18 @@
     </body>
     <script>
         console.log("Please enter 'playRound(\"Rock Paper or Scissors\")' to play a round")
-        let rock = "rock"
-        let paper = "paper"
-        let scissors = "scissors"
 
         //Computer choice
         function computerPlay() {
             let computerChoice = getRandomInt(3);
             if (computerChoice == 0) {
-                return rock
+                return "rock"
             }
             else if (computerChoice == 1) {
-                return paper
+                return "paper"
             }
             else {
-                return scissors
+                return "scissors"
             }
         } 
 
