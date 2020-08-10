@@ -10,64 +10,7 @@
     </head>
     <body>
         <h1>Rock Paper Scissors</h1>
+        <button onclick="game()">Click here to play</button>
+        <script src="scripts.js"></script>
     </body>
-    <script>
-        console.log("Please enter 'playRound(\"Rock Paper or Scissors\")' to play a round")
-
-        //Computer choice
-        function computerPlay() {
-            let computerChoice = getRandomInt(3);
-            if (computerChoice == 0) {
-                return "rock"
-            }
-            else if (computerChoice == 1) {
-                return "paper"
-            }
-            else {
-                return "scissors"
-            }
-        } 
-
-        //Plays a round of Rock Paper Scissors
-        function playRound (playerSelection, computerSelection) {
-            computerSelection = computerPlay();
-
-            //Player wins
-            if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
-                return "You win! Rock beats Scissors"
-            }
-            else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
-                return "You win! Scissors beats Paper"
-            }
-            else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
-                return "You win! Paper beats rock"
-            }
-
-            //Player loses
-            else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
-                return "You lose! Paper beats rock"
-            }
-            else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
-                return "You lose! Rock beats Scissors"
-            }
-            else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors"){
-                return "You lose! Scissors beats paper"
-            }
-
-            //Draw
-            else if ((playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors") || (playerSelection.toLowerCase() == "paper" && computerSelection == "paper") || (playerSelection.toLowerCase() == "rock" && computerSelection == "rock")) {
-                return "Draw!"
-            }
-
-            //Incorrect information given
-            else {
-                return "Please enter either 'rock', 'paper' or 'scissor'"
-            }
-        }
-
-        //Generate random integer from 0-2
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * Math.floor(max));
-        }
-    </script>
 </html>
