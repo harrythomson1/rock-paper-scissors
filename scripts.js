@@ -61,16 +61,16 @@ function playRound (playerSelection, computerSelection) {
     function game() {
         for (i = 0; i < 5; i++) {
             choice = prompt ("Rock, Paper, Scissors?", "");
-            console.log(playRound(choice));
+            alert(playRound(choice));
         }
         if (playerScore > computerScore) {
-            console.log(`Final Score - Player:${playerScore} Computer:${computerScore}. Congratulations!`)
+            alert(`Final Score - Player:${playerScore} Computer:${computerScore}. Congratulations!`)
         }
         else if (computerScore > playerScore) {
-            console.log(`Final Score - Player:${playerScore} Computer:${computerScore}. Unlucky!`)
+            alert(`Final Score - Player:${playerScore} Computer:${computerScore}. Unlucky!`)
         }
         else if (computerScore == playerScore) {
-            console.log(`Final Score - Player:${playerScore} Computer:${computerScore}. It's a draw!`)
+            alert(`Final Score - Player:${playerScore} Computer:${computerScore}. It's a draw!`)
         }
         //Reset player scores
         playerScore = 0
