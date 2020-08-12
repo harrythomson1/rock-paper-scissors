@@ -72,46 +72,34 @@ function playRound (playerSelection, computerSelection) {
         checkResult()
         }
     }
-}   
-    //Plays a five round game
-function game() {
-    for (i = 0; i < 5; i++) {
-        choice = prompt ("Rock, Paper, Scissors?", "");
-        alert(playRound(choice));
-    }
-    if (playerScore > computerScore) {
-        alert(`Final Score - Player:${playerScore} Computer:${computerScore}. Congratulations!`)
-    }
-    else if (computerScore > playerScore) {
-        alert(`Final Score - Player:${playerScore} Computer:${computerScore}. Unlucky!`)
-    }
-    else if (computerScore == playerScore) {
-        alert(`Final Score - Player:${playerScore} Computer:${computerScore}. It's a draw!`)
-    }
-    //Reset player scores
-    playerScore = 0
-    computerScore = 0
-}
+} 
 
 // Stops the game when 5 is reached by either side
 function checkResult() {
     if (playerScore >= 5) {
-        textScore.textContent = "WINNER!"
+        textScore.textContent = `WINNER! Final Score - Player:${playerScore} Computer:${computerScore}`
         document.getElementById("rock").removeEventListener("click", function(){playRound("rock")});
     }
     else if (computerScore >= 5) {
-        textScore.textContent = "Loser!"
+        textScore.textContent = `Loser! Final Score - Player:${playerScore} Computer:${computerScore}`
     }
 }
 
+function newGame() {
+    playerScore = 0;
+    computerScore = 0;
+    textScore.textContent = "Rock Paper Scissors, first to five!";
+}
+
 textScore = document.getElementById("textScore");
+reset = document.getElementById("reset");
 rock = document.getElementById("rock");
 paper = document.getElementById("paper");
 scissors = document.getElementById("scissors");
 rock.addEventListener("click", function(){playRound("rock")});
 paper.addEventListener("click", function(){playRound("paper")});
 scissors.addEventListener("click", function(){playRound("scissors")});
-
+reset.addEventListener("click", function(){newGame()})
 
 
 //Generate random integer from 0-2
