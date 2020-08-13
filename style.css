@@ -1,1 +1,52 @@
+html {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(227,54,50,1) 0%, rgba(227,54,50,1) 50%, rgba(5,60,215,1) 50%);
+}
 
+@font-face {
+    font-family: 'badaboom_bbregular';
+    src: url('fonts/badaboombb_reg-webfont.woff2') format('woff2'),
+         url('fontr/badaboombb_reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: badaboom_bbregular;
+    font-size: 100px;
+    color: black;
+    position: relative;
+    left: 10px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    font-family: badaboom_bbregular;
+}
+
+#textScore {
+    display: flex;
+    justify-content: center;
+    font-family: badaboom_bbregular;
+    font-size: 50px;
+    position: relative;
+    top: 50px;
+}
+
+img {
+    width: 150px;
+}
+
+#selection {
+    position: relative;
+    right: 10px;
+    top: 100px;
+}
+
+#reset {
+    position: relative;
+    top: 200px;
+}
